@@ -39,7 +39,7 @@ public class PacienteService implements IPacienteService {
 
             repository.save(pacienteUpdate);
         }else{
-            System.out.println("No existe el cliente");
+            System.out.println("No existe el paciente");
         }
     }
 

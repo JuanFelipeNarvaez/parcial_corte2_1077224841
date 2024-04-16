@@ -14,7 +14,7 @@ public class Paciente {
     @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @Column(name = "fecha_de_nacimiento", nullable = false)
+    @Column(name = "fecha_de_nacimiento")
     private LocalDate fechaDeNacimeinto;
 
     public Long getId() {

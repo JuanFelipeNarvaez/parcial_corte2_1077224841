@@ -1,0 +1,7 @@
+{
+  "name": "parcial-dos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
