@@ -36,7 +36,6 @@ public class MedicoService implements IMedicoService{
             Medico medicoUpdate = ps.get();
             medicoUpdate.setNombre(medico.getNombre());
             medicoUpdate.setEspecialidad(medico.getEspecialidad());
-            medicoUpdate.setPaciente(medico.getPaciente());
 
             repository.save(medicoUpdate);
         }else{

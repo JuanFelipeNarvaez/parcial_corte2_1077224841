@@ -36,6 +36,7 @@ public class PacienteService implements IPacienteService {
             Paciente pacienteUpdate = ps.get();
             pacienteUpdate.setNombre(paciente.getNombre());
             pacienteUpdate.setFechaDeNacimeinto(paciente.getFechaDeNacimeinto());
+            pacienteUpdate.setMedico(paciente.getMedico());
 
             repository.save(pacienteUpdate);
         }else{

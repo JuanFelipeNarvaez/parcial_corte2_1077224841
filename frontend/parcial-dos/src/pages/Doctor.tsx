@@ -1,28 +1,33 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonButton, IonGrid } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonButton, IonGrid, IonInput, IonRow, IonCol, IonIcon } from '@ionic/react';
+import './Estilos.css';
 
-const Home: React.FC = () => {
+const Doctor: React.FC = () => {
   return (
-    <IonContent>
-      <IonGrid>
-        <IonButton color="success">Crear Doctor</IonButton>
-        <IonList>
-          <IonItem>
-            <IonLabel>Juan</IonLabel>
-            <IonLabel>Cirujano</IonLabel>
-            <IonButton color="warning">Actualizar</IonButton>
-            <IonButton color="danger">Eliminar</IonButton>
-          </IonItem>
-          <IonItem>
-            <IonLabel>Camilo</IonLabel>
-            <IonLabel>Pediatra</IonLabel>
-            <IonButton color="warning">Actualizar</IonButton>
-            <IonButton color="danger">Eliminar</IonButton>
-          </IonItem>
-        </IonList>
-      </IonGrid>
-    </IonContent>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar color="danger">
+          <IonTitle>Doctor</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+      <IonGrid className='formContainer'>
+          <IonRow>
+            <IonCol size='12' size-md='6'>
+              <form className='loginForm'>
+                <IonInput type="text"className='inputFields' label="Nombre">
+                </IonInput>
+                <IonInput type='text' className='inputFields' label="Especialidad:">
+                </IonInput>
+                <IonButton shape='round' className='button' expand='full' color="success" href='Inicio'>
+                  Guardar
+                </IonButton>
+              </form>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+      </IonContent>
+    </IonPage>
   );
 };
 
-export default Home;
+export default Doctor;

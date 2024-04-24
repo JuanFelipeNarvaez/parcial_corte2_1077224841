@@ -1,26 +1,34 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonButton, IonGrid } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonButton, IonGrid, IonRow, IonCol, IonInput } from '@ionic/react';
+import './Estilos.css';
 
 const Paciente: React.FC = () => {
   return (
-    <IonContent>
-      <IonGrid>
-        <IonButton color="success">Crear Paciente</IonButton>
-        <IonList>
-          <IonItem>
-            <IonLabel>Maria</IonLabel>
-            <IonLabel>16/04/2024</IonLabel>
-            <IonButton color="warning">Actualizar</IonButton>
-            <IonButton color="danger">Eliminar</IonButton>
-          </IonItem>
-          <IonItem>
-            <IonLabel>Sofia</IonLabel>
-            <IonLabel>04/08/2000</IonLabel>
-            <IonButton color="warning">Actualizar</IonButton>
-            <IonButton color="danger">Eliminar</IonButton>
-          </IonItem>
-        </IonList>
-      </IonGrid>
-    </IonContent>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar color="warning">
+          <IonTitle>Paciente</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonGrid className='formContainer'>
+          <IonRow>
+            <IonCol size='12' size-md='6'>
+              <form className='loginForm'>
+                <IonInput type="text" className='inputFields' label="Nombre">
+                </IonInput>
+                <IonInput type='date' className='inputFields' label="Fecha Nac">
+                </IonInput>
+                <IonInput type='number' className='inputFields' label="Id doctor">
+                </IonInput>
+                <IonButton shape='round' className='button' expand='full' color="success" href='Inicio'>
+                  Guardar
+                </IonButton>
+              </form>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+      </IonContent>
+    </IonPage>
   );
 };
 export default Paciente;

@@ -17,10 +17,6 @@ public class Medico {
     @Column(name = "especialidad", nullable = false)
     private String especialidad;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "paciente_id", nullable = false)
-    private Paciente paciente;
-
     public Long getId() {
         return id;
     }
@@ -43,13 +39,5 @@ public class Medico {
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
-    }
-
-    public Paciente getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
     }
 }
